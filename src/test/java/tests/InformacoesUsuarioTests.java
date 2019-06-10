@@ -24,6 +24,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import suporte.Generator;
 import suporte.Screenshot;
 import suporte.Generator;
+import suporte.Web;
+
 import javax.naming.Name;
 import java.util.concurrent.TimeUnit;
 
@@ -40,13 +42,8 @@ import java.util.concurrent.TimeUnit;
             @Before
             public void setUp() {
 
-                System.setProperty("webdriver.chrome.driver", "\\C:\\Users\\lgabriel\\drivers\\chromedriver.exe");
+                nav = Web.createChrome();
 
-                //criando objeto navegador
-                nav = new ChromeDriver();
-                nav.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-                //navegando até a pagina
-                nav.get("http://www.juliodelima.com.br/taskit/");
 
                 //Clicando no link "Sign in"
                 nav.findElement(By.linkText("Sign in")).click();
