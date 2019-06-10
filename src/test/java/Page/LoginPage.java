@@ -3,14 +3,13 @@ package Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
-
-    private WebDriver nav;
+public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver nav) {
-        this.nav = nav;
+        super(nav);
     }
-    public LoginFormPage ClicarLogin() {
+
+    public LoginFormPage clicarSignIn() {
         nav.findElement(By.linkText("Sign in")).click();
 
     return new LoginFormPage(nav);

@@ -1,5 +1,6 @@
 package tests;
 
+import Page.BasePage;
 import Page.LoginFormPage;
 import Page.LoginPage;
 import org.junit.After;
@@ -8,25 +9,26 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import suporte.Web;
 
-public class InformacoesUsuarioPageObjectsTest {
-    private WebDriver nav;
+public class InformacoesUsuarioPageObjectsTest{
+        private WebDriver nav;
 
         @Before
-        public void SetUp() {
-            nav = Web.createChrome();
-
-        }
+            public void SetUp(){
+                nav = Web.createChrome();
+            }
 
         @Test
-        public void testAdicionaUmaInformacaoAdicionalDoUsuario() {
-            new LoginPage(nav)
-                    .ClicarLogin()
-                    .fazerLogin("julio0001","123456");
-        }
+            public void testAdicionaUmaInformacaoAdicionalDoUsuario() {
+                new LoginPage(nav)
+                        .clicarSignIn()
+                        .fazerLogin("julio0001","123456")
+                        .clicarMe()
+                        .ClicarAbaMoreDataAbout();
+            }
 
-        @After
-        public void tearDown() {
-            nav.quit();
+            @After
+            public void tearDown() {
+                nav.quit();
 
+            }
         }
-    }

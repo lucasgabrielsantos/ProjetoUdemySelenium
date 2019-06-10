@@ -11,7 +11,7 @@ public class SecretaPage extends BasePage {
     }
 
     public Mepage clicarMe(){
-            nav.findElement(By.className("me")).click();
+        nav.findElement(By.className("me")).click();
 
         return new Mepage(nav);
         }

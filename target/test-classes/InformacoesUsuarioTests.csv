@@ -1,4 +1,4 @@
-testAdicionaUmaInformacaoAdicionalDoUsuario,tipo,contato,msg,Duration(ms)
-"",Phone,+5531999991121,Your contact has been added!,776.0
-"",Phone,+5531999991122,Your contact has been added!,921.0
-"",E-mail,lucaassaso@abc.com.br,Your contact has been added!,1002.0
+testAdicionaUmaInformacaoAdicionalDoUsuario,tipo,contato,msg,Duration(ms),Duration(ms)
+"",Phone,+5531999991121,Your contact has been added!,848.0,848.0
+"",Phone,+5531999991122,Your contact has been added!,921.0,921.0
+"",E-mail,lucaassaso@abc.com.br,Your contact has been added!,1002.0,1002.0
