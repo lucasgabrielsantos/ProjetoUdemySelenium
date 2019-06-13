@@ -23,12 +23,14 @@ public class InformacoesUsuarioPageObjectsTest{
                         .clicarSignIn()
                         .fazerLogin("julio0001","123456")
                         .clicarMe()
-                        .ClicarAbaMoreDataAbout();
+                        .ClicarAbaMoreDataAbout()
+                        .ClicarNoBotaoAddMoreDataAboutYou()
+                        .AdicionarContato("Phone","+5511999988881");
             }
 
             @After
             public void tearDown() {
-                nav.quit();
+                //nav.quit();
 
             }
         }
